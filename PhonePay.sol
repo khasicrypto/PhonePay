@@ -13,6 +13,10 @@
 
 pragma solidity ^0.6.12;
 // SPDX-License-Identifier: Unlicensed
+
+
+
+
 interface IERC20 {
 
     function totalSupply() external view returns (uint256);
@@ -706,6 +710,7 @@ contract PhonePay is Context, IERC20, Ownable {
    
     uint256 private constant MAX = ~uint256(0);
     uint256 private _tTotal = 1000000;
+    uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
     string private _name = "PhonePay";
